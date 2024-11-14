@@ -37,7 +37,8 @@ The chatbot enables users to interact and manage their orders through natural la
 - **Complete Order**: "Complete my order."
 - **Track Order**: "What's the status of order ID 123?"
 
-https://github.com/user-attachments/assets/17d60ea2-2bda-4a2d-aded-64df9e91a142
+https://github.com/user-attachments/assets/281a57e6-6c50-4b12-b8cb-77669b1b3841
+
 
 
 ---

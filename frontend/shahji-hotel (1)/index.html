@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shahji Hotel</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    #chatbot-sidebar {
+      position: fixed;
+      right: 20px; /* Set to align with bottom-right */
+      bottom: 0;
+      width: 0;
+      height: 430px; /* Adjust height as needed */
+      background-color: #f1f1f1;
+      overflow-x: hidden;
+      transition: 0.3s;
+      box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+      z-index: 1000;
+    }
+
+    #chatbot-sidebar iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Button to open/close the chatbot */
+    #chatbot-toggle {
+      position: fixed;
+      right: 20px; /* Align with sidebar */
+      bottom: 20px; /* Close to the bottom of the page */
+      padding: 10px 15px;
+      font-size: 18px;
+      background-color: #ff5722;
+      color: white;
+      border: none;
+      cursor: pointer;
+      z-index: 1001;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="images/banner (3).jpg" alt="Shahji Hotel Banner" class="banner">
+    <h1>Welcome to Shahji Hotel</h1>
+  </header>
+  <main>
+    <section class="menu">
+      <h2>Our Menu</h2>
+      <div class="menu-items">
+        <div class="item">
+          <img src="D:/sem-7/food_chatbot/frontend/shahji-hotel (1)/images/pav bhaji.jpg" alt="Pav Bhaji">
+          <p>Pav Bhaji - ₹20</p>
+        </div>
+        <div class="item">
+          <img src="images/chole.jpg" alt="Chole Bhature">
+          <p>Chole Bhature - ₹35</p>
+        </div>
+        <div class="item">
+          <img src="images/pizza (2).jpg" alt="Pizza">
+          <p>Pizza - ₹210</p>
+        </div>
+        <div class="item">
+          <img src="images/mango lassi.jpg" alt="Mango Lassi">
+          <p>Mango Lassi - ₹60</p>
+        </div>
+        <div class="item">
+          <img src="images/masal dosa.jpg" alt="Masala Dosa">
+          <p>Masala Dosa - ₹80</p>
+        </div>
+        <div class="item">
+          <img src="images/biryani (2).jpg" alt="Biryani">
+          <p>Biryani - ₹90</p>
+        </div>
+        <div class="item">
+          <img src="images/bada pav.jpg" alt="Vada Pav">
+          <p>Vada Pav - ₹15</p>
+        </div>
+        <div class="item">
+          <img src="images/rava dosa.jpg" alt="Rava Dosa">
+          <p>Rava Dosa - ₹100</p>
+        </div>
+        <div class="item">
+          <img src="images/samosa (2).jpg" alt="Samosa">
+          <p>Samosa - ₹15</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="location">
+      <h2>Location</h2>
+      <p>Sec-10 Faridabad, Haryana</p>
+    </section>
+
+    <section id="contactus">
+      <h2>Contact Us</h2>
+      <p>Got questions? Want to place an order? Call us at +916206632517 or email us at info@shahfastfood.com</p>
+    </section>
+  </main>
+
+  <!-- Chatbot Sidebar -->
+  <div id="chatbot-sidebar">
+    <iframe allow="microphone;" 
+            src="https://console.dialogflow.com/api-client/demo/embedded/4a7bd012-3f19-4758-bd42-3f48d647f7b9">
+    </iframe>
+  </div>
+
+  <!-- Button to open/close chatbot -->
+  <button id="chatbot-toggle" onclick="toggleChatbot()"> Click for Order</button>
+
+  <script>
+    function toggleChatbot() {
+      const sidebar = document.getElementById("chatbot-sidebar");
+      const button = document.getElementById("chatbot-toggle");
+
+      if (sidebar.style.width === "0px" || sidebar.style.width === "") {
+        sidebar.style.width = "350px";
+        button.textContent = "Close Chat";
+      } else {
+        sidebar.style.width = "0";
+        button.textContent = "Chat";
+      }
+    }
+  </script>
+</body>
+</html>
